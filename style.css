@@ -136,9 +136,13 @@ aside {
   list-style: none;
 }
 
+#sidebar-nav li a {
+  color: #000;
+}
+
 #sidebar-nav li a:hover {
   background: rgba(243, 252, 255, 0.86);
-  color: #00c9ed;
+  color: #00f;
   border-radius: 6px;
 }
 
@@ -149,7 +153,7 @@ aside {
 #sidebar-nav li ul li:hover {
   list-style: disc;
   background: rgba(243, 252, 255, 0.86);
-  color: #00c9ed;
+  color: #00f;
 }
 
 #sidebar-nav li ul li {
