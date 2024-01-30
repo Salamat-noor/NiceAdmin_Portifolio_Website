@@ -1,0 +1,66 @@
+@media (max-width: 1025px) {
+  header #headerLogo {
+    min-width: 100px;
+  }
+
+  header #headerLogo a img {
+    max-width: 20px;
+  }
+
+  header #headerLogo a span {
+    font-size: 1.2rem;
+  }
+
+  header #headerLogo svg {
+    margin-left: 5px;
+  }
+
+  .Page1 {
+    flex-direction: column;
+  }
+
+  #DBLEFT {
+    width: 100%;
+  }
+
+  #DBRIGHT {
+    width: 100%;
+  }
+}
+
+@media (max-width: 769px) {
+  header #headerLogo {
+    min-width: 60px;
+  }
+
+  header .header-nav #profPic {
+    max-width: 35px;
+    height: 35px;
+  }
+
+  .srch_box_nav2 {
+    display: block;
+  }
+
+  #main {
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 476px) {
+  .row2DBCol {
+    min-height: 300px;
+  }
+
+  .row3DBCol {
+    min-height: 300px;
+  }
+
+  .row4DBCol {
+    min-height: 300px;
+  }
+
+  .cardForBudgetReport {
+    min-height: 300px;
+  }
+}

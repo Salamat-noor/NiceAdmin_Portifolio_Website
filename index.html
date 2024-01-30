@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NICE_ADMIN_TEMPLATE</title>
+  <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./styleMedia.css" />
+  <!--  -->
+  <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <header class="fixed-top shadow d-flex align-items-center bglight">
+    <div class="d-flex align-items-center justify-content-between" id="headerLogo">
+      <a href="#" class="d-flex align-items-center">
+        <img src="./img/logo.png" alt="" />
+        <span class="d-none d-md-block text-dark">NiceAdmin</span>
+      </a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" id="navToggle"
+        class="nav-item fs-1" onclick="asideAnimation()" class="bi bi-list class-menu" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+      </svg>
+    </div>
+    <!-- LOGO END -->
+    <div id="srch-box-nav" class="d-none d-xl-block">
+      <form action="#" method="post" class="form-inline d-flex align-items-center">
+        <input type="text" title="Enter search keyword" placeholder="Search" />
+        <button type="submit" class="btn" title="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-search search-Icon" viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+          </svg>
+        </button>
+      </form>
+    </div>
+    <!-- FOR MOBILE SCREEN THE SEARCH BOX -->
+    <div class="srch_box_nav2 shadow">
+      <form action="#" method="post" class="form-inline d-flex align-items-center">
+        <input type="text" title="Enter search keyword" placeholder="Search" />
+      </form>
+    </div>
+    <!-- SEARCH BAR END -->
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item dropdown d-block d-lg-none" id="srchIcon-2">
+          <button type="submit" class="btn" title="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-search search-Icon" viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>
+          </button>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link nav-icon" data-bs-toggle="dropdown">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bell"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+            </svg>
+            <span class="badge badge-primary badge-number bg-primary">4</span>
+          </a>
+        </li>
+        <!-- Notification END -->
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link nav-icon" data-bs-toggle="dropdown">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+              class="bi bi-chat-left-text" viewBox="0 0 16 16">
+              <path
+                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+              <path
+                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+            </svg>
+            <span class="badge badge-primary badge-number bg-success">3</span>
+          </a>
+        </li>
+        <!-- PROFILE LOGO SETUP -->
+        <li class="nav-item dropdown pe-3">
+          <a href="#" class="nav-link nav-profile d-flex align-items-center pe-0" data-bs-toggle="dropdown">
+            <img src="./Images/noor.jpg" alt="Profile" id="profPic" />
+            <span class="d-none d-md-block dropdown-toggle ps-2" id="profName">NOOR</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Header End -->
+  <aside class="shadow bglight sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="li nav-item" id="li1">
+        <a href="#dashboard" class="nav-link collapsed">
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <!-- Dashboard END -->
+      <li class="li nav-item">
+        <a title="Components-Nav" href="#" class="nav-link" data-bs-target="#components-nav" data-bs-toggle="collapse">
+          <i class="bi bi-menu-button-wide"></i>
+          <span>Components</span>
+          <i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <!-- Components nav -->
+        <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li id="li2">
+            <a href="#ComponentsAlert">
+              <i class="bi-bi-circle"></i>
+              <span>Alert</span>
+            </a>
+          </li>
+          <!-- Alerts End -->
+          <li id="li3">
+            <a href="#ComponentsAccordions" class="active">
+              <i class="bi-bi-circle"></i>
+              <span>Accordion</span>
+            </a>
+          </li>
+          <!-- Accordions End -->
+          <li id="li4">
+            <a href="#" class="active">
+              <i class="bi-bi-circle"></i>
+              <span>Badges</span>
+            </a>
+          </li>
+          <!-- Badges End -->
+          <li id="li5">
+            <a href="#" class="active">
+              <i class="bi-bi-circle"></i>
+              <span>Breadcrumbs</span>
+            </a>
+          </li>
+          <!-- Breadcrumbs End -->
+          <li id="li6">
+            <a href="#" class="active">
+              <i class="bi-bi-circle"></i>
+              <span>Buttons</span>
+            </a>
+          </li>
+          <!-- Buttons End -->
+          <li id="li7">
+            <a href="#" class="active">
+              <i class="bi-bi-circle"></i>
+              <span>Cards</span>
+            </a>
+          </li>
+          <!-- Cards End -->
+          <li id="li8">
+            <a href="#" class="active">
+              <i class="bi-bi-circle"></i>
+              <span>Carousel</span>
+            </a>
+          </li>
+          <!-- Carousel End -->
+          <li id="li9">
+            <a href="#" class="active">
+              <i class="bi-bi-circle"></i>
+              <span>List group</span>
+            </a>
+          </li>
+          <!-- List group End -->
+          <li id="li10">
+            <a href="#" class="active">
+              <i class="bi-bi-circle"></i>
+              <span>Modal</span>
+            </a>
+          </li>
+          <!-- Model End -->
+          <li id="li11">
+            <a href="#" class="active">
+              <i class="bi-bi-circle"></i>
+              <span>Tabs</span>
+            </a>
+          </li>
+          <!-- tabs End -->
+          <li id="li12">
+            <a href="#" class="active">
+              <i class="bi-bi-circle"></i>
+              <span>Pagination</span>
+            </a>
+          </li>
+          <!-- Pagination End -->
+          <li id="li13">
+            <a href="#" class="active">
+              <i class="bi-bi-circle"></i>
+              <span>Progress</span>
+            </a>
+          </li>
+          <!-- Progress End -->
+          <li id="li14">
+            <a href="#" class="active">
+              <i class="bi-bi-circle"></i>
+              <span>Spinners</span>
+            </a>
+          </li>
+          <!-- Spinners End -->
+          <li id="li15">
+            <a href="#" class="active">
+              <i class="bi-bi-circle"></i>
+              <span>Tooltips</span>
+            </a>
+          </li>
+          <!-- Tooltips End -->
+        </ul>
+      </li>
+      <!-- Components END -->
+      <li class="li nav-item" id="li17">
+        <a title="Forms-NAv" href="#" class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse"
+          aria-expanded="false">
+          <i class="bi bi-journal-text"></i>
+          <span>Forms</span>
+          <i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li id="li18">
+            <a href="">
+              <i class="bi bi-circle"></i>
+              <span>Form Elements</span>
+            </a>
+          </li>
+          <!--  -->
+          <li id="li19">
+            <a href="">
+              <i class="bi bi-circle"></i>
+              <span>Form Layouts</span>
+            </a>
+          </li>
+          <!--  -->
+          <li id="li20">
+            <a href="">
+              <i class="bi bi-circle"></i>
+              <span>Form Editors</span>
+            </a>
+          </li>
+          <!--  -->
+          <li id="li21">
+            <a href="">
+              <i class="bi bi-circle"></i>
+              <span>Form Validation</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- Forms End -->
+      <li class="li nav-item" id="li22">
+        <a title="Table-nav" href="" class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse"
+          aria-expanded="false">
+          <i class="bi bi-layout-text-window-reverse"></i>
+          <span>Tables</span>
+          <i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul class="nav-content collapse" id="tables-nav" data-bs-parent="#sidebar-nav">
+          <li id="li23">
+            <a href="#">
+              <i class="bi bi-circle"></i>
+              <span>General Tables</span>
+            </a>
+          </li>
+          <li id="li24">
+            <a href="#">
+              <i class="bi bi-circle"></i>
+              <span>Data Tables</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- Tables End-->
+      <li class="li nav-item" id="li25">
+        <a href="#" class="nav-link" data-bs-target="#charts-nav" data-bs-toggle="collapse" aria-expanded="false">
+          <i class="bi bi-bar-chart"></i>
+          <span>Charts</span>
+          <i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="charts-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li id="li26">
+            <a href="#">
+              <i class="bi bi-circle"></i>
+              <span>Chart.js</span>
+            </a>
+          </li>
+          <li id="li27">
+            <a href="">
+              <i class="bi bi-circle"></i>
+              <span>ApexCharts</span>
+            </a>
+          </li>
+          <li id="li28">
+            <a href="">
+              <i class="bi bi-circle"></i>
+              <span>ECharts</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- Charts End -->
+      <li class="li nav-item" id="li29">
+        <a href="#" class="nav-link" data-bs-target="#icons-nav" data-bs-toggle="collapse" aria-expanded="false">
+          <i class="bi bi-gem"></i>
+          <span>Icons</span>
+          <i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul class="nav-content collapse" id="icons-nav" data-bs-parent="#sidebar-nav">
+          <li id="li30">
+            <a href="#">
+              <i class="bi bi-circle"></i>
+              <span>Bootstrap Icons</span>
+            </a>
+          </li>
+          <!--  -->
+          <li id="li31">
+            <a href="#">
+              <i class="bi bi-circle"></i>
+              <span>Remix Icons</span>
+            </a>
+          </li>
+          <!--  -->
+          <li id="li32">
+            <a href="#">
+              <i class="bi bi-circle"></i>
+              <span>Boxicons</span>
+            </a>
+          </li>
+          <!--  -->
+        </ul>
+      </li>
+      <!-- Icons End -->
+      <li class="nav-heading">Pages</li>
+      <!-- Nav Heading End -->
+      <li class="nav-item" id="li33">
+        <a href="#" class="nav-link">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+      </li>
+      <!-- End Profile Page -->
+      <li class="nav-item" id="li34">
+        <a href="#" class="nav-link collapsed">
+          <i class="bi bi-question-circle"></i>
+          <span>F.A.Q</span>
+        </a>
+      </li>
+      <!-- END F.A.Q Page-->
+      <li class="nav-item" id="li35">
+        <a href="#" class="nav-link collapsed">
+          <i class="bi bi-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li>
+      <!-- END Contact Page-->
+      <li class="nav-item" id="li36">
+        <a href="#" class="nav-link collapsed">
+          <i class="bi bi-card-list"></i>
+          <span>Register</span>
+        </a>
+      </li>
+      <!-- END Register Page-->
+      <li class="nav-item" id="li37">
+        <a href="#" class="nav-link collapsed">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Login</span>
+        </a>
+      </li>
+      <!-- END Login Page-->
+      <li class="nav-item" id="li38">
+        <a href="#" class="nav-link collapsed">
+          <i class="bi bi-dash-circle"></i>
+          <span>Error 404</span>
+        </a>
+      </li>
+      <!-- END Error 404 Page-->
+      <li class="nav-item" id="li39">
+        <a href="#" class="nav-link collapsed">
+          <i class="bi bi-file-earmark"></i>
+          <span>Blank</span>
+        </a>
+      </li>
+      <!-- END Blank Page-->
+    </ul>
+  </aside>
+  <!-- ASIDE END -->
+  <main class="main" id="main">
+    <div class="container-fluid" id="dashboard">
+      <div class="pagetitle px-sm-3 px-md-5 py-3">
+        <h1 class="PTFA">Dashboard</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="./index.html" title="HOME"> Home </a>
+            </li>
+            <li class="breadcrumb-item active">
+              Dashboard
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <!-- Page Heading END -->
+      <div class="Page1">
+        <div id="DBLEFT" class="py-1">
+          <div class="row justify-content-center gx-3 DBLEFTiNNER1">
+            <div class="col-12 col-md-5 mx-4 my-3 col-xl-3 DBLEFTiNNER2 shadow bglight">
+              <div class="DBROW1COLS">
+                <div><strong>Sales</strong> | Today</div>
+                <div>•••</div>
+              </div>
+              <!-- COL 1 HEADER END -->
+              <div class="SRCContent">
+                <div class="SRCContentIMG" id="cart1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-cart"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                  </svg>
+                </div>
+                <div class="d-flex flex-column align-items-left justify-content-center">
+                  <div class="display-6"><strong>145</strong></div>
+                  <small class="d-flex align-items-center gap-3"><strong
+                      class="text-success">12%</strong>increase</small>
+                </div>
+              </div>
+            </div>
+            <!-- COL1 END -->
+            <div class="col-12 col-md-5 mx-3 my-3 col-xl-3 DBLEFTiNNER2 shadow bglight">
+              <div class="DBROW1COLS">
+                <div><strong>Revenue</strong> | This Month</div>
+                <div>•••</div>
+              </div>
+              <!-- COL 2 HEADER END -->
+              <div class="SRCContent">
+                <div class="SRCContentIMG" id="dollar1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="green"
+                    class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                    <path
+                      d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z" />
+                  </svg>
+                </div>
+                <div class="d-flex flex-column align-items-left justify-content-center">
+                  <div class="display-6"><strong>$3,264</strong></div>
+                  <small class="d-flex align-items-center gap-3"><strong
+                      class="text-success">8%</strong>increase</small>
+                </div>
+              </div>
+            </div>
+            <!-- COL 2 END -->
+            <div class="col-12 col-md-10 mx-4 my-3 col-xl-3 shadow DBLEFTiNNER2 bglight">
+              <div class="DBROW1COLS">
+                <div><strong>Customers</strong> | This Year</div>
+                <div>•••</div>
+              </div>
+              <!-- COL 3 HEADER END -->
+              <div class="SRCContent">
+                <div class="SRCContentIMG" id="people1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="orange" class="bi bi-people"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
+                  </svg>
+                </div>
+                <div class="d-flex flex-column align-left-center justify-content-center">
+                  <div class="display-6"><strong>1244</strong></div>
+                  <small class="d-flex align-items-center gap-3"><strong
+                      class="text-danger">12%</strong>decrease</small>
+                </div>
+              </div>
+            </div>
+            <!-- COL 3 END -->
+          </div>
+          <!-- GRAPH 1 Reports -->
+          <div class="row justify-content-center gx-5 my-3 my-lg-5 row2DB">
+            <div class="col-12 col-sm-10 shadow row2DBCol">
+              <div class="d-flex align-items-center justify-content-between" id="ReportsGraphHeading">
+                <div><strong>Reports</strong> / Today</div>
+                <div>•••</div>
+              </div>
+            </div>
+          </div>
+          <!-- GRAPH 1 Reports ENDDDDDDDDDDDDDDD -->
+          <!-- DashBoard Table After Graph1 -->
+          <div class="row justify-content-center gx-5 row3DB">
+            <div class="col-12 col-sm-10 shadow row3DBCol">
+              <div class="d-flex align-items-center justify-content-between" id="ReportsGraphHeading">
+                <div><strong>Recent Sales</strong> | Today</div>
+                <div>•••</div>
+              </div>
+              <div>
+                <div class="row my-1">
+                  <div class="col d-flex align-items-center justify-content-between mx-1">
+                    <div class="d-flex align-items-center gap-2">
+                      <select name="EntriesPPage" id="EntriesPerPage" class="p-1" title="Entries">
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
+                        <option value="15">15</option>
+                        <option value="All">All</option>
+                      </select>
+                      <smal id="EPPROW3">entries per page</small>
+                    </div>
+                    <div>
+                      <form action="#" align="right">
+                        <input id="RSTableInp1" class="px-1 px-md-3 py-1 py-md-2" type="text" name="" id=""
+                          placeholder="Search..." />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!--  Table Body-->
+                <div class="row  my-2 my-sm-3">
+                  <div class="col"><strong>#</strong></div>
+                  <div class="col"><strong>Customer</strong></div>
+                  <div class="col"><strong>Product</strong></div>
+                  <div class="col"><strong>Price</strong></div>
+                  <div class="col"><strong>Status</strong></div>
+                </div>
+                <!-- 1st Row END -->
+                <div class="row  my-2 my-sm-3">
+                  <div class="col text-primary"><a href="#dashboard">#2344</a></div>
+                  <div class="col">Elon Musk</div>
+                  <div class="col text-primary"><a href="#dashboard">F07-91 Rocket</a></div>
+                  <div class="col">$99</div>
+                  <div class="col d-flex align-items-center">
+                    <p class=" text-white bg-success rounded px-1">approved</p>
+                  </div>
+                </div>
+                <!-- 2st Row END -->
+                <div class="row  my-2 my-sm-3">
+                  <div class="col text-primary"><a href="#dashboard">#2344</a></div>
+                  <div class="col">Elon Musk</div>
+                  <div class="col text-primary"><a href="#dashboard">F07-91 Rocket</a></div>
+                  <div class="col">$99</div>
+                  <div class="col d-flex align-items-center">
+                    <p class=" text-white bg-warning rounded px-1">pending</p>
+                  </div>
+                </div>
+                <!-- 3st Row END -->
+                <div class="row  my-2 my-sm-3">
+                  <div class="col text-primary"><a href="#dashboard">#2344</a></div>
+                  <div class="col">Elon Musk</div>
+                  <div class="col text-primary"><a href="#dashboard">F07-91 Rocket</a></div>
+                  <div class="col">$99</div>
+                  <div class="col d-flex align-items-center">
+                    <p class=" text-white bg-success rounded px-1">approved</p>
+                  </div>
+                </div>
+                <!-- 4st Row END -->
+                <div class="row  my-2 my-sm-3">
+                  <div class="col text-primary"><a href="#dashboard">#2344</a></div>
+                  <div class="col">Elon Musk</div>
+                  <div class="col text-primary"><a href="#dashboard">F07-91 Rocket</a></div>
+                  <div class="col">$99</div>
+                  <div class="col d-flex align-items-center">
+                    <p class=" text-white bg-danger rounded px-1">rejected</p>
+                  </div>
+                </div>
+                <!-- 5st Row END -->
+                <div class="row  my-2 my-sm-3">
+                  <div class="col text-primary"><a href="#dashboard">#2344</a></div>
+                  <div class="col">Elon Musk</div>
+                  <div class="col text-primary"><a href="#dashboard">F07-91 Rocket</a></div>
+                  <div class="col">$99</div>
+                  <div class="col d-flex align-items-center">
+                    <p class=" text-white bg-success rounded px-1">approved</p>
+                  </div>
+                </div>
+                <!-- 6st Rows END -->
+                <hr>
+                <div class="row my-2 my-sm-3">
+                  <div class="col">Showing 1 to 5 of 5 entries</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- DashBoard Table After Graph1 ENDDDDDDDDDDDDDDDDDDDDD -->
+          <!-- TOP SELLINGS TODAY TABLE -->
+          <div class="row justify-content-center gx-5 row4DB">
+            <div class="col-12 col-sm-10 shadow row4DBCol">
+              <div class="d-flex align-items-center justify-content-between" id="ReportsGraphHeading">
+                <div><strong>Top Selling</strong> | Today</div>
+                <div>•••</div>
+              </div>
+              <div>
+                <!--  Table Body-->
+                <div class="row  my-2 my-sm-3">
+                  <div class="col"><strong>Preview</strong></div>
+                  <div class="col"><strong>Product</strong></div>
+                  <div class="col"><strong>Price</strong></div>
+                  <div class="col"><strong>Sold</strong></div>
+                  <div class="col"><strong>Revenue</strong></div>
+                </div>
+                <!-- 1st Row -->
+                <div class="row  my-2 my-sm-3">
+                  <div class="col text-primary  d-flex align-items-center"><a title="Dashboard" href="#dashboard">
+                      <img src="./img/product-1.jpg" alt="" width="60">
+                    </a></div>
+                  <div class="col d-flex align-items-center">Lorem, ipsum.</div>
+                  <div class="col text-primary d-flex align-items-center"><a href="#dashboard">$64</a></div>
+                  <div class="col d-flex align-items-center"><strong>124</strong></div>
+                  <div class="col d-flex align-items-center">
+                    $5,828
+                  </div>
+                </div>
+                <!-- 1st Row END -->
+                <!-- 2st Row  -->
+                <div class="row  my-2 my-sm-3">
+                  <div class="col text-primary  d-flex align-items-center"><a title="Dashboard" href="#dashboard">
+                      <img src="./img/product-2.jpg" alt="" width="60">
+                    </a></div>
+                  <div class="col d-flex align-items-center">Lorem, ipsum.</div>
+                  <div class="col text-primary d-flex align-items-center"><a href="#dashboard">$64</a></div>
+                  <div class="col d-flex align-items-center"><strong>124</strong></div>
+                  <div class="col d-flex align-items-center">
+                    $5,828
+                  </div>
+                </div>
+                <!-- 2st Row END -->
+                <!-- 3st Row  -->
+                <div class="row  my-2 my-sm-3">
+                  <div class="col text-primary  d-flex align-items-center"><a title="Dashboard" href="#dashboard">
+                      <img src="./img/product-3.jpg" alt="" width="60">
+                    </a></div>
+                  <div class="col d-flex align-items-center">Lorem, ipsum.</div>
+                  <div class="col text-primary d-flex align-items-center"><a href="#dashboard">$64</a></div>
+                  <div class="col d-flex align-items-center"><strong>124</strong></div>
+                  <div class="col d-flex align-items-center">
+                    $5,828
+                  </div>
+                </div>
+                <!-- 3st Row END -->
+                <!-- 4st Row -->
+                <div class="row  my-2 my-sm-3">
+                  <div class="col text-primary  d-flex align-items-center"><a title="Dashboard" href="#dashboard">
+                      <img src="./img/product-4.jpg" alt="" width="60">
+                    </a></div>
+                  <div class="col d-flex align-items-center">Lorem, ipsum.</div>
+                  <div class="col text-primary d-flex align-items-center"><a href="#dashboard">$64</a></div>
+                  <div class="col d-flex align-items-center"><strong>124</strong></div>
+                  <div class="col d-flex align-items-center">
+                    $5,828
+                  </div>
+                </div>
+                <!-- 4st Row END -->
+                <!-- 5st Row -->
+                <div class="row  my-2 my-sm-3">
+                  <div class="col text-primary  d-flex align-items-center"><a title="Dashboard" href="#dashboard">
+                      <img src="./img/product-5.jpg" alt="" width="60">
+                    </a></div>
+                  <div class="col d-flex align-items-center">Lorem, ipsum.</div>
+                  <div class="col text-primary d-flex align-items-center"><a href="#dashboard">$64</a></div>
+                  <div class="col d-flex align-items-center"><strong>124</strong></div>
+                  <div class="col d-flex align-items-center">
+                    $5,828
+                  </div>
+                </div>
+                <!-- 5st Row END -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div id="DBRIGHT" class="py-4">
+          <div class="row justify-content-center gx-5">
+            <div class="col-12 col-sm-10 shadow bglight">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-1">
+                  <strong>Recent Activity</strong>
+                  | Today
+                </div>
+                <div class="d-flex-align-items-center-justify-content-center">•••</div>
+              </div>
+              <div class="cardForRecentAct">
+                <div class="row">
+                  <div class="col-12 d-flex gap-3">
+                    <div class="minsRecentActivity minsRecentActivity1">32 min</div>
+                    <div class="RAPARA">Lorem ipsum, dolor sit amet <strong>consectetur</strong> adipisicing.</div>
+                  </div>
+                </div>
+                <!-- 1st END -->
+                <div class="row">
+                  <div class="col-12 d-flex gap-3">
+                    <div class="minsRecentActivity minsRecentActivity2">56 min</div>
+                    <div class="RAPARA">Lorem ipsum, dolor sit amet <strong>consectetur</strong> adipisicing.</div>
+                  </div>
+                </div>
+                <!-- 2nd END -->
+                <div class="row">
+                  <div class="col-12 d-flex gap-3">
+                    <div class="minsRecentActivity minsRecentActivity3">2 hr</div>
+                    <div class="RAPARA">Lorem ipsum, dolor sit amet <strong>consectetur</strong> adipisicing.</div>
+                  </div>
+                </div>
+                <!-- 3rd END -->
+                <div class="row">
+                  <div class="col-12 d-flex gap-3">
+                    <div class="minsRecentActivity minsRecentActivity4">1 day</div>
+                    <div class="RAPARA">Lorem ipsum, dolor sit amet <strong>consectetur</strong> adipisicing.</div>
+                  </div>
+                </div>
+                <!-- 4th END -->
+                <div class="row">
+                  <div class="col-12 d-flex gap-3">
+                    <div class="minsRecentActivity minsRecentActivity5">2 days</div>
+                    <div class="RAPARA">Lorem ipsum, dolor sit amet <strong>consectetur</strong> adipisicing.</div>
+                  </div>
+                </div>
+                <!-- 5th END -->
+                <div class="row">
+                  <div class="col-12 d-flex gap-3">
+                    <div class="minsRecentActivity minsRecentActivitylast">4 weeks</div>
+                    <div>Lorem ipsum, dolor sit amet <strong>consectetur</strong> adipisicing.</div>
+                  </div>
+                </div>
+                <!-- 6th END -->
+              </div>
+            </div>
+          </div>
+          <!-- DashBoard Right First Row End -->
+          <div class="row justify-content-center gx-5 my-5">
+            <div class="col-12 col-sm-10 shadow bglight">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-1">
+                  <strong>Budget Report</strong>
+                  | This Month
+                </div>
+                <div class="d-flex-align-items-center-justify-content-center">•••</div>
+              </div>
+              <!--  -->
+              <div class="cardForBudgetReport">
+              </div>
+            </div>
+          </div>
+          <!-- DashBoard Right Second Row End -->
+          <div class="row justify-content-center gx-5 my-5">
+            <div class="col-12 col-sm-10 shadow bglight">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-1">
+                  <strong>Website Traffic</strong>
+                  | Today
+                </div>
+                <div class="d-flex-align-items-center-justify-content-center">•••</div>
+              </div>
+              <!--  -->
+              <div class="cardForBudgetReport">
+              </div>
+            </div>
+          </div>
+          <!-- DashBoard Right Third Row End -->
+          <div class="row justify-content-center gx-5 my-5">
+            <div class="col-12 col-sm-10 shadow bglight">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-1">
+                  <strong>News & Updates</strong>
+                  | Today
+                </div>
+                <div class="d-flex-align-items-center-justify-content-center">•••</div>
+              </div>
+              <!--  -->
+              <div class="cardForNewsAndUpdates d-flex flex-column gap-3 my-2">
+                <div class="row justify-content-center gx-5">
+                  <div class="col d-flex align-items-center justify-content-left gap-3 my-2">
+                    <div class="rounded d-flex align-items-center justify-content-center">
+                      <img src="./img/news-1.jpg" alt="" width="80">
+                    </div>
+                    <div>
+                      <h6 class="m-0">Nihil blanditiis at in nihil autem</h6>
+                      <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+                    </div>
+                  </div>
+                </div>
+                <!-- 1st row End -->
+                <div class="row justify-content-center gx-5">
+                  <div class="col d-flex align-items-center justify-content-left gap-3 my-2">
+                    <div class="rounded d-flex align-items-center justify-content-center">
+                      <img src="./img/news-2.jpg" alt="" width="80">
+                    </div>
+                    <div>
+                      <h6 class="m-0">Nihil blanditiis at in nihil autem</h6>
+                      <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+                    </div>
+                  </div>
+                </div>
+                <!-- 2nd row End -->
+                <div class="row justify-content-center gx-5">
+                  <div class="col d-flex align-items-center justify-content-left gap-3 my-2">
+                    <div class="rounded d-flex align-items-center justify-content-center">
+                      <img src="./img/news-3.jpg" alt="" width="80">
+                    </div>
+                    <div>
+                      <h6 class="m-0">Nihil blanditiis at in nihil autem</h6>
+                      <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+                    </div>
+                  </div>
+                </div>
+                <!-- 3rd row End -->
+                <div class="row justify-content-center gx-5">
+                  <div class="col d-flex align-items-center justify-content-left gap-3 my-2">
+                    <div class="rounded d-flex align-items-center justify-content-center">
+                      <img src="./img/news-4.jpg" alt="" width="80">
+                    </div>
+                    <div>
+                      <h6 class="m-0">Nihil blanditiis at in nihil autem</h6>
+                      <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+                    </div>
+                  </div>
+                </div>
+                <!-- 4th row End -->
+                <div class="row justify-content-center gx-5">
+                  <div class="col d-flex align-items-center justify-content-left gap-3 my-2">
+                    <div class="rounded d-flex align-items-center justify-content-center">
+                      <img src="./img/news-5.jpg" alt="" width="80">
+                    </div>
+                    <div>
+                      <h6 class="m-0">Nihil blanditiis at in nihil autem</h6>
+                      <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+                    </div>
+                  </div>
+                </div>
+                <!-- 5th row End -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- INNER BODY END =======     BODY 1 DASHBOARD -->
+    <div class="container-fluid" id="ComponentsAlert">
+      <div class="pagetitle px-sm-3 px-md-5 py-3">
+        <h1 class="PTFA">Alerts</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="./index.html" title="HOME"> Home </a>
+            </li>
+            <li class="breadcrumb-item">
+              Components
+            </li>
+            <li class="breadcrumb-item active">
+              Alerts
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <!-- Page Heading END -->
+      <div class="Page2">
+        <div class="row" id="P2Row">
+          <div class="col-lg-6">
+            <!-- 1st Card -->
+            <div class="card my-3">
+              <div class="card-body">
+                <h5 class="card-title">Default</h5>
+                <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                  A simple Primary alert-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+                  A simple secondary alert-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  A simple success alert-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  A simple danger alert-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  A simple warning alert-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                  A simple info alert-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <div class="alert alert-light alert-dismissible fade show" role="alert">
+                  A simple light alert-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <div class="alert alert-dark alert-dismissible fade show" role="alert">
+                  A simple dark alert-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              </div>
+            </div>
+            <!-- 2nd Card -->
+            <div class="card my-3">
+              <div class="card-body">
+                <h5 class="card-title">With Icon</h5>
+                <!-- 1st Row -->
+                <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                  <i class="bi bi-star me-1"></i>
+                  A simple primary alert with icon-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 1st Row End-->
+                <!-- 2nd Row -->
+                <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+                  <i class="bi bi-collection me-1"></i>
+                  A simple secondary alert with icon—check it out!<button type="button" class="btn-close"
+                    data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <!-- 2nd Row End-->
+                <!-- 3rd Row -->
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <i class="bi bi-check-circle me-1"></i>
+                  A simple success alert with icon—check it out!<button type="button" class="btn-close"
+                    data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <!-- 3rd Row End-->
+                <!-- 4th Row -->
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <i class="bi bi-exclamation-octagon me-1"></i>
+                  A simple danger alert with icon—check it out!<button type="button" class="btn-close"
+                    data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <!-- 4th Row End-->
+                <!-- 5th Row -->
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <i class="bi bi-exclamation-triangle me-1"></i>
+                  A simple warning alert with icon—check it out!<button type="button" class="btn-close"
+                    data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <!-- 5th Row End-->
+                <!-- 6th Row -->
+                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                  <i class="bi bi-info-circle me-1"></i>
+                  A simple info alert with icon—check it out!<button type="button" class="btn-close"
+                    data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <!-- 6th Row End-->
+                <!-- 7th Row -->
+                <div class="alert alert-dark alert-dismissible fade show" role="alert">
+                  <i class="bi bi-folder me-1"></i>
+                  A simple dark alert with icon—check it out!<button type="button" class="btn-close"
+                    data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <!-- 7th Row End-->
+              </div>
+            </div>
+            <!-- 3rd Card -->
+            <div class="card my-3">
+              <div class="card-body">
+                <h5 class="card-title">Outlined</h5>
+                <!-- 1st Row -->
+                <div class="alert border-primary alert-dismissible fade show" role="alert">
+                  A simple Primary Outlined alert-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 1st Row End-->
+                <!-- 2st Row -->
+                <div class="alert border-secondary alert-dismissible fade show" role="alert">
+                  A simple Secondary Outlined alert-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 2nd Row End-->
+                <!-- 3rd Row -->
+                <div class="alert border-success alert-dismissible fade show" role="alert">
+                  A simple success Outlined alert-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 3rd Row End-->
+                <!-- 4th Row -->
+                <div class="alert border-danger alert-dismissible fade show" role="alert">
+                  A simple danger Outlined alert-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 4th Row End-->
+                <!-- 5th Row -->
+                <div class="alert border-warning alert-dismissible fade show" role="alert">
+                  A simple warning Outlined alert-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 5th Row End-->
+                <!-- 6th Row -->
+                <div class="alert border-info alert-dismissible fade show" role="alert">
+                  A simple info Outlined alert-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 6th Row End-->
+                <!-- 7th Row -->
+                <div class="alert border-light alert-dismissible fade show" role="alert">
+                  A simple light Outlined alert-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 7th Row End-->
+                <!-- 8th Row -->
+                <div class="alert border-dark alert-dismissible fade show" role="alert">
+                  A simple dark Outlined alert-check it out!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 8th Row End-->
+              </div>
+            </div>
+          </div>
+          <!-- Alerts RIGHT Side -->
+          <div class="col-lg-6">
+            <!-- 1st card -->
+            <div class="card my-3">
+              <div class="card-body">
+                <h5 class="card-title">Default Solid Color</h5>
+
+                <div class="alert alert-primary bg-primary text-light border-0 alert-dismissible fade show"
+                  role="alert">
+                  A simple primary alert with solid color-check it out!
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+                </div>
+                <!-- 1st row -->
+                <div class="alert alert-secondary bg-secondary text-light border-0 alert-dismissible fade show"
+                  role="alert">
+                  A simple secondary alert with solid color-check it out!
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+                </div>
+                <!-- 2nd Row -->
+                <div class="alert alert-success bg-success text-light border-0 alert-dismissible fade show"
+                  role="alert">
+                  A simple success alert with solid color-check it out!
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+                </div>
+                <!-- 3rd Row -->
+                <div class="alert alert-danger bg-danger text-light border-0 alert-dismissible fade show" role="alert">
+                  A simple danger alert with solid color-check it out!
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+                </div>
+                <!-- 4th Row -->
+                <div class="alert alert-warning bg-warning text-light border-0 alert-dismissible fade show"
+                  role="alert">
+                  A simple warning alert with solid color-check it out!
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+                </div>
+                <!-- 5th Row -->
+                <div class="alert alert-info bg-info text-light border-0 alert-dismissible fade show" role="alert">
+                  A simple info alert with solid color-check it out!
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+                </div>
+                <!-- 6th Row -->
+                <div class="alert alert-light bg-light text-dark border-0 alert-dismissible fade show" role="alert">
+                  A simple light alert with solid color-check it out!
+                  <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+                </div>
+                <!-- 7th Row -->
+                <div class="alert alert-dark bg-dark text-light border-0 alert-dismissible fade show" role="alert">
+                  A simple dark alert with solid color-check it out!
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+                </div>
+              </div>
+            </div>
+            <!-- 2nd Card -->
+            <div class="card my-3">
+              <div class="card-body">
+                <h5 class="card-title">With Heading & Seperator</h5>
+                <!-- 1st row -->
+                <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                  <h4 class="alert-heading">Primary Heading</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quia tempora est! Lorem, ipsum dolor
+                    sit amet consectetur adipisicing elit. Quae asperiores recusandae natus!</p>
+                  <hr>
+                  <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 1st row End-->
+                <!-- 2nd row -->
+                <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+                  <h4 class="alert-heading">secondary Heading</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quia tempora est! Lorem, ipsum dolor
+                    sit amet consectetur adipisicing elit. Quae asperiores recusandae natus!</p>
+                  <hr>
+                  <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 2nd row End-->
+                <!-- 3rd row -->
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <h4 class="alert-heading">success Heading</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quia tempora est! Lorem, ipsum dolor
+                    sit amet consectetur adipisicing elit. Quae asperiores recusandae natus!</p>
+                  <hr>
+                  <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 3rd row End-->
+                <!-- 4th row -->
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <h4 class="alert-heading">danger Heading</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quia tempora est! Lorem, ipsum dolor
+                    sit amet consectetur adipisicing elit. Quae asperiores recusandae natus!</p>
+                  <hr>
+                  <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 4th row End-->
+                <!-- 5th row -->
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <h4 class="alert-heading">warning Heading</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quia tempora est! Lorem, ipsum dolor
+                    sit amet consectetur adipisicing elit. Quae asperiores recusandae natus!</p>
+                  <hr>
+                  <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 5th row End-->
+                <!-- 6th row -->
+                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                  <h4 class="alert-heading">info Heading</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quia tempora est! Lorem, ipsum dolor
+                    sit amet consectetur adipisicing elit. Quae asperiores recusandae natus!</p>
+                  <hr>
+                  <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 6th row End-->
+                <!-- 7th row -->
+                <div class="alert alert-light alert-dismissible fade show" role="alert">
+                  <h4 class="alert-heading">light Heading</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quia tempora est! Lorem, ipsum dolor
+                    sit amet consectetur adipisicing elit. Quae asperiores recusandae natus!</p>
+                  <hr>
+                  <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 7th row End-->
+                <!-- 8th row -->
+                <div class="alert alert-dark alert-dismissible fade show" role="alert">
+                  <h4 class="alert-heading">dark Heading</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quia tempora est! Lorem, ipsum dolor
+                    sit amet consectetur adipisicing elit. Quae asperiores recusandae natus!</p>
+                  <hr>
+                  <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+                <!-- 8th row End-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- INNER BODY END =======     BODY 2 COMPONENTS ALERT-->
+    <div class="container-fluid" id="ComponentsAccordions">
+      <div class="pagetitle px-sm-3 px-md-5 py-3">
+        <h1 class="PTFA">Accordion</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="./index.html" title="HOME"> Home </a>
+            </li>
+            <li class="breadcrumb-item">
+              Components
+            </li>
+            <li class="breadcrumb-item active">
+              Accordion
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <!-- Page Heading END -->
+      <div class="page3">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Default Accordion</h5>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Accordion Item #1
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong>
+                        It is hidden by default, until the collapse plugin adds the appropriate classes that we use to
+                        style each element. These
+                        classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+                        You can modify any of
+                        this with custom CSS or overriding our default variables. It's also worth noting that just about
+                        any HTML can go within
+                        the<code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion 1 End -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        Accordion Item #2
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong>
+                        It is hidden by default, until the collapse plugin adds the appropriate classes that we use to
+                        style each element. These
+                        classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+                        You can modify any of
+                        this with custom CSS or overriding our default variables. It's also worth noting that just about
+                        any HTML can go within
+                        the<code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion 2 End -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Accordion Item #3
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong>
+                        It is hidden by default, until the collapse plugin adds the appropriate classes that we use to
+                        style each element. These
+                        classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+                        You can modify any of
+                        this with custom CSS or overriding our default variables. It's also worth noting that just about
+                        any HTML can go within
+                        the<code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion 3 End -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- LEFT COL END -->
+          <div class="col-lg-6"></div>
+          <!-- RIGHT COL END -->
+        </div>
+      </div>
+    </div>
+    <!-- PAGE 28 STARTS PROFILE PAGE -->
+    <div class="container-fluid" id="ProfilePage">
+      <div class="pagetitle px-sm-3 px-md-5 py-3">
+        <h1 class="PTFA">Profile</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="./index.html" title="HOME"> Home </a>
+            </li>
+            <li class="breadcrumb-item">
+              Users
+            </li>
+            <li class="breadcrumb-item active">
+              Profile
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <!-- Page Heading END -->
+      <div id="page28">
+        <div class="row">
+          <div class="col-xxl-4">
+            <div class="card">
+              <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+                <img src="./Images/noor.jpg" alt="Profile" class="rounded-circle" id="ProfPICSet">
+                <h2>Salamat Noor</h2>
+                <h3>Web DEV & Designer</h3>
+                <div class="social-links mt-2">
+                  <a title="social-link" href="#" class="twitter">
+                    <i class="bi bi-twitter"></i>
+                  </a>
+                  <a title="social-link" href="#" class="facebook">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                  <a title="social-link" href="#" class="instagram">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                  <a title="social-link" href="#" class="linkedin">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-8">
+            <div class="card">
+              <div class="card-body pt-3">
+                <ul class="nav nav-tabs nav-tabs-bordered" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview"
+                      aria-selected="true" role="tab">
+                      Overview
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit" aria-selected="false"
+                      tabindex="-1" role="tab">Edit Profile</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings"
+                      aria-selected="false" tabindex="-1" role="tab">Settings</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password"
+                      aria-selected="false" tabindex="-1" role="tab">Change Password</button>
+                  </li>
+                </ul>
+                <div class="tab-content pt-2">
+                  <div class="tab-pane fade show active profile-overview" id="profile-overview" role="tabpanel">
+                    <h5 class="card-title">About</h5>
+                    <p class="small fst-italic">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda,
+                      dignissimos.</p>
+                    <h5 class="card-title">Profile Details</h5>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label ">Full Name</div>
+                      <div class="col-lg-9 col-md-8">Salamat NOOR</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Company</div>
+                      <div class="col-lg-9 col-md-8">LHS, LadY Finger SoftWare House</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Job</div>
+                      <div class="col-lg-9 col-md-8">Web Designer</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Country</div>
+                      <div class="col-lg-9 col-md-8">Pakistan</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Address</div>
+                      <div class="col-lg-9 col-md-8">Rahim Abad Gilgit</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Phone</div>
+                      <div class="col-lg-9 col-md-8">+923554434668</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Email</div>
+                      <div class="col-lg-9 col-md-8">saqiiashiq6@gmail.com</div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade profile-edit pt-3" id="profile-edit" role="tabpanel">
+                    <form>
+                      <div class="row mb-3">
+                        <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
+                        <div class="col-md-8 col-lg-9">
+                          <img src="./Images/noor.jpg" alt="Profile">
+                          <div class="pt-2">
+                            <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image">
+                              <form action="#">
+                                <label for="userImgProfile">
+                                  <input title="UserImg" type="file" name="" id="ImgUPBtn" class="userIMAGEUP">
+                                </label>
+                              </form>
+                              <i class="bi bi-upload"></i>
+                            </a>
+                            <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image">
+                              <i class="bi bi-trash"></i>
+                              Delete
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PAGE 28 ENDS PROFILE PAGE -->
+    <!-- FOOTER START -->
+    <footer class="footer d-flex flex-column align-items-center justify-content-center" id="footer">
+      <div>
+        © Copyright NiceAdmin. All Rights Reserved
+      </div>
+      <div>
+        Designed by <a href="#">N00R</a>
+      </div>
+    </footer>
+    <!-- FOOTER End -->
+  </main>
+  <!--  -->
+  <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+  <!--  -->
+  <script src="./script.js"></script>
+</body>
+
+</html>
