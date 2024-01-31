@@ -132,8 +132,14 @@ aside {
   overflow-y: auto;
 }
 
+aside::-webkit-scrollbar {
+  width: 0%;
+  display: none;
+}
+
 #sidebar-nav {
   list-style: none;
+  margin-bottom: 3rem;
 }
 
 #sidebar-nav li a {
@@ -154,6 +160,10 @@ aside {
   list-style: disc;
   background: rgba(243, 252, 255, 0.86);
   color: #00f;
+}
+
+.arrowAnimated {
+  transition: .35s ease-out all;
 }
 
 #sidebar-nav li ul li {

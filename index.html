@@ -11,7 +11,7 @@
   <!--  -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+  <!-- <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" /> -->
 </head>
 
 <body>
@@ -91,7 +91,11 @@
       </ul>
     </nav>
   </header>
+  <!-- ======================================= -->
+  <!-- ======================================= -->
   <!-- Header End -->
+  <!-- ======================================= -->
+  <!-- ======================================= -->
   <aside class="shadow bglight sidebar">
     <ul class="sidebar-nav" id="sidebar-nav">
 
@@ -107,17 +111,24 @@
       </li>
       <!-- Dashboard END -->
       <li class="li nav-item">
-        <a title="Components-Nav" href="#" class="nav-link d-flex align-items-center gap-1"
+        <a title="Components-Nav" href="#"
+          class="arrowhandler nav-link d-flex align-items-center justify-content-between"
           data-bs-target="#components-nav" data-bs-toggle="collapse">
+          <div class="d-flex align-items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-menu-button-wide" viewBox="0 0 16 16">
+              <path
+                d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v2A1.5 1.5 0 0 1 14.5 5h-13A1.5 1.5 0 0 1 0 3.5zM1.5 1a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5z" />
+              <path
+                d="M2 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m10.823.323-.396-.396A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0M0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5" />
+            </svg>
+            <span>Components</span>
+          </div>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-            class="bi bi-menu-button-wide" viewBox="0 0 16 16">
-            <path
-              d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v2A1.5 1.5 0 0 1 14.5 5h-13A1.5 1.5 0 0 1 0 3.5zM1.5 1a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5z" />
-            <path
-              d="M2 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m10.823.323-.396-.396A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0M0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5" />
+            class="bi bi-chevron-down ms-auto arrowAnimated" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
           </svg>
-          <span>Components</span>
-          <i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <!-- Components nav -->
         <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
@@ -223,21 +234,28 @@
       </li>
       <!-- Components END -->
       <li class="li nav-item" id="li17">
-        <a title="Forms-NAv" href="#" class="nav-link collapsed d-flex align-items-center gap-1"
+        <a title="Forms-NAv" href="#"
+          class="arrowhandler nav-link collapsed d-flex align-items-center justify-content-between"
           data-bs-target="#forms-nav" data-bs-toggle="collapse" aria-expanded="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-text"
-            viewBox="0 0 16 16">
-            <path
-              d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
-            <path
-              d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2" />
-            <path
-              d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z" />
+          <div class="d-flex align-items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-journal-text" viewBox="0 0 16 16">
+              <path
+                d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+              <path
+                d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2" />
+              <path
+                d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z" />
+            </svg>
+            <span>Forms</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-chevron-down ms-auto arrowAnimated" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
           </svg>
-          <span>Forms</span>
-          <i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="forms-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+        <ul id="forms-nav" class="nav-content collapse hide" data-bs-parent="#sidebar-nav">
           <li id="li18">
             <a href="">
               <i class="bi bi-circle"></i>
@@ -269,17 +287,24 @@
       </li>
       <!-- Forms End -->
       <li class="li nav-item" id="li22">
-        <a title="Table-nav" href="" class="nav-link collapsed d-flex align-items-center gap-1"
+        <a title="Table-nav" href=""
+          class="arrowhandler nav-link collapsed d-flex align-items-center justify-content-between"
           data-bs-target="#tables-nav" data-bs-toggle="collapse" aria-expanded="false">
+          <div class="d-flex align-items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-layout-text-window-reverse" viewBox="0 0 16 16">
+              <path
+                d="M13 6.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5m0 3a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5m-.5 2.5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1z" />
+              <path
+                d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM2 1a1 1 0 0 0-1 1v1h14V2a1 1 0 0 0-1-1zM1 4v10a1 1 0 0 0 1 1h2V4zm4 0v11h9a1 1 0 0 0 1-1V4z" />
+            </svg>
+            <span>Tables</span>
+          </div>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-            class="bi bi-layout-text-window-reverse" viewBox="0 0 16 16">
-            <path
-              d="M13 6.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5m0 3a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5m-.5 2.5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1z" />
-            <path
-              d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM2 1a1 1 0 0 0-1 1v1h14V2a1 1 0 0 0-1-1zM1 4v10a1 1 0 0 0 1 1h2V4zm4 0v11h9a1 1 0 0 0 1-1V4z" />
+            class="bi bi-chevron-down ms-auto arrowAnimated" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
           </svg>
-          <span>Tables</span>
-          <i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul class="nav-content collapse" id="tables-nav" data-bs-parent="#sidebar-nav">
           <li id="li23">
@@ -298,15 +323,21 @@
       </li>
       <!-- Tables End-->
       <li class="li nav-item" id="li25">
-        <a href="#" class="nav-link d-flex align-items-center gap-1" data-bs-target="#charts-nav"
-          data-bs-toggle="collapse" aria-expanded="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart"
-            viewBox="0 0 16 16">
-            <path
-              d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z" />
+        <a href="#" class="arrowhandler nav-link d-flex align-items-center justify-content-between"
+          data-bs-target="#charts-nav" data-bs-toggle="collapse" aria-expanded="false">
+          <div class="d-flex align-items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart"
+              viewBox="0 0 16 16">
+              <path
+                d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z" />
+            </svg>
+            <span>Charts</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" a
+            class="bi bi-chevron-down ms-auto arrowAnimated" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
           </svg>
-          <span>Charts</span>
-          <i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="charts-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
           <li id="li26">
@@ -331,15 +362,21 @@
       </li>
       <!-- Charts End -->
       <li class="li nav-item" id="li29">
-        <a href="#" class="nav-link d-flex align-items-center gap-1" data-bs-target="#icons-nav"
-          data-bs-toggle="collapse" aria-expanded="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gem"
-            viewBox="0 0 16 16">
-            <path
-              d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6zm11.386 3.785-1.806-2.41-.776 2.413zm-3.633.004.961-2.989H4.186l.963 2.995zM5.47 5.495 8 13.366l2.532-7.876zm-1.371-.999-.78-2.422-1.818 2.425zM1.499 5.5l5.113 6.817-2.192-6.82zm7.889 6.817 5.123-6.83-2.928.002z" />
+        <a href="#" class="arrowhandler nav-link d-flex align-items-center justify-content-between"
+          data-bs-target="#icons-nav" data-bs-toggle="collapse" aria-expanded="false">
+          <div class="d-flex align-items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gem"
+              viewBox="0 0 16 16">
+              <path
+                d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6zm11.386 3.785-1.806-2.41-.776 2.413zm-3.633.004.961-2.989H4.186l.963 2.995zM5.47 5.495 8 13.366l2.532-7.876zm-1.371-.999-.78-2.422-1.818 2.425zM1.499 5.5l5.113 6.817-2.192-6.82zm7.889 6.817 5.123-6.83-2.928.002z" />
+            </svg>
+            <span>Icons</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" a
+            class="bi bi-chevron-down ms-auto arrowAnimated" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
           </svg>
-          <span>Icons</span>
-          <i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul class="nav-content collapse" id="icons-nav" data-bs-parent="#sidebar-nav">
           <li id="li30">
@@ -368,7 +405,7 @@
       <!-- Icons End -->
       <li class="nav-heading">Pages</li>
       <!-- Nav Heading End -->
-      <li class="nav-item" id="li33">
+      <li class="li nav-item" id="li33">
         <a href="#" class="nav-link d-flex align-items-center gap-1">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person"
             viewBox="0 0 16 16">
@@ -379,7 +416,7 @@
         </a>
       </li>
       <!-- End Profile Page -->
-      <li class="nav-item" id="li34">
+      <li class="li nav-item" id="li34">
         <a href="#" class="nav-link collapsed d-flex align-items-center gap-1">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
             class="bi bi-question-circle" viewBox="0 0 16 16">
@@ -391,7 +428,7 @@
         </a>
       </li>
       <!-- END F.A.Q Page-->
-      <li class="nav-item" id="li35">
+      <li class="li nav-item" id="li35">
         <a href="#" class="nav-link collapsed d-flex align-items-center gap-1">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope"
             viewBox="0 0 16 16">
@@ -402,7 +439,7 @@
         </a>
       </li>
       <!-- END Contact Page-->
-      <li class="nav-item" id="li36">
+      <li class="li nav-item" id="li36">
         <a href="#" class="nav-link collapsed d-flex align-items-center gap-1">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-list"
             viewBox="0 0 16 16">
@@ -415,7 +452,7 @@
         </a>
       </li>
       <!-- END Register Page-->
-      <li class="nav-item" id="li37">
+      <li class="li nav-item" id="li37">
         <a href="#" class="nav-link collapsed d-flex align-items-center gap-1">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
             class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
@@ -428,7 +465,7 @@
         </a>
       </li>
       <!-- END Login Page-->
-      <li class="nav-item" id="li38">
+      <li class="li nav-item" id="li38">
         <a href="#" class="nav-link collapsed d-flex align-items-center gap-1">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle"
             viewBox="0 0 16 16">
@@ -439,7 +476,7 @@
         </a>
       </li>
       <!-- END Error 404 Page-->
-      <li class="nav-item" id="li39">
+      <li class="li nav-item" id="li39">
         <a href="#" class="nav-link collapsed d-flex align-items-center gap-1">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark"
             viewBox="0 0 16 16">
@@ -452,7 +489,11 @@
       <!-- END Blank Page-->
     </ul>
   </aside>
+  <!-- ======================================= -->
+  <!-- ======================================= -->
   <!-- ASIDE END -->
+  <!-- ======================================= -->
+  <!-- ======================================= -->
   <main class="main" id="main">
     <div class="container-fluid" id="dashboard">
       <div class="pagetitle px-sm-3 px-md-5 py-3">
@@ -1382,6 +1423,7 @@
                       aria-selected="false" tabindex="-1" role="tab">Change Password</button>
                   </li>
                 </ul>
+                <!--==============  NAV ENDDDDDDDD -========================-->
                 <div class="tab-content pt-2">
                   <div class="tab-pane fade show active profile-overview" id="profile-overview" role="tabpanel">
                     <h5 class="card-title">About</h5>
@@ -1417,6 +1459,7 @@
                       <div class="col-lg-9 col-md-8">saqiiashiq6@gmail.com</div>
                     </div>
                   </div>
+                  <!-- ================OVERVIEW ENDDDDDDDD================== -->
                   <div class="tab-pane fade profile-edit pt-3" id="profile-edit" role="tabpanel">
                     <form>
                       <div class="row mb-3">
@@ -1424,13 +1467,13 @@
                         <div class="col-md-8 col-lg-9">
                           <img src="./Images/noor.jpg" alt="Profile">
                           <div class="pt-2">
-                            <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image">
+                            <a href="#ImgUPBtn" class="btn btn-primary btn-sm" title="Upload new profile image">
                               <form action="#">
                                 <label for="userImgProfile">
                                   <input title="UserImg" type="file" name="" id="ImgUPBtn" class="userIMAGEUP">
                                 </label>
                               </form>
-                              <i class="bi bi-upload"></i>
+                              <!-- <i class="bi bi-upload"></i> -->
                             </a>
                             <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image">
                               <i class="bi bi-trash"></i>
@@ -1441,6 +1484,7 @@
                       </div>
                     </form>
                   </div>
+                  <!-- ======================EDIT PROFILE ENDDDDDDDDD====================== -->
                 </div>
               </div>
             </div>
@@ -1460,12 +1504,20 @@
     </footer>
     <!-- FOOTER End -->
   </main>
+  <!-- ======================================= -->
+  <!-- ======================================= -->
   <!--  -->
-  <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+  <!-- ======================================= -->
+  <!-- ======================================= -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>`
+  <!-- <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script> -->
+  <!-- ======================================= -->
+  <!-- ======================================= -->
   <!--  -->
+  <!-- ======================================= -->
+  <!-- ======================================= -->
   <script src="./script.js"></script>
 </body>
 

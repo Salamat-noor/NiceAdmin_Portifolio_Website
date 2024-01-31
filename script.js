@@ -2,30 +2,80 @@ function ProfileUpdate() {
     const ProfPICSet = document.getElementById("ProfPICSet");
     const userIMAGEUP = document.getElementsByClassName("userIMAGEUP")[0];
 
-    userIMAGEUP.addEventListener("click", function () {
-        setTimeout(() => {
-            var a = ProfPICSet.setAttribute("src", userIMAGEUP.value);
-            console.log(a);
-        }, 10000);
-        
+    let nayaPic;
+
+    const picStored = userIMAGEUP.addEventListener('click', () => {
+        nayaPic = userIMAGEUP.value;
+        // if(nayaPic.value == picStored)
     });
 
 };
 ProfileUpdate();
+// ======================================
 function asideAnimation() {
     const aside = document.getElementsByTagName("aside")[0];
     const main = document.getElementsByTagName("main")[0];
 
-
-    if (aside.style.left == "-300px") {
-        aside.style.left = "0px";
-    } else {
+    if (aside.style.left == "0px") {
         aside.style.left = "-300px";
+    } else {
+        aside.style.left = "0px";
     }
     main.addEventListener("click", () => {
         aside.style.left = "-300px";
     });
 };
+// ==========================
+function AsideLiUlAnimation() {
+    const arrowhandler = document.querySelectorAll(".arrowhandler");
+    const ulis = document.querySelectorAll(".li>ul");
+    const bi_chevron_down = document.querySelectorAll(".arrowAnimated");
+
+    for (const iterator of bi_chevron_down) {
+        iterator.style.transform = "rotate(0deg)"
+        console.log(iterator);
+    }
+    arrowhandler[0].addEventListener('click', () => {
+        if (bi_chevron_down[0].style.transform == "rotate(0deg)") {
+            bi_chevron_down[0].style.transform = "rotate(180deg)";
+        } else {
+            bi_chevron_down[0].style.transform = "rotate(0deg)";
+        };
+    });
+    // ==================================
+    arrowhandler[1].addEventListener('click', () => {
+        if (bi_chevron_down[1].style.transform == "rotate(0deg)") {
+            bi_chevron_down[1].style.transform = "rotate(180deg)";
+        } else {
+            bi_chevron_down[1].style.transform = "rotate(0deg)";
+        };
+    });
+    // ==================================
+    arrowhandler[2].addEventListener('click', () => {
+        if (bi_chevron_down[2].style.transform == "rotate(0deg)") {
+            bi_chevron_down[2].style.transform = "rotate(180deg)";
+        } else {
+            bi_chevron_down[2].style.transform = "rotate(0deg)";
+        };
+    });
+    // ==================================
+    arrowhandler[3].addEventListener('click', () => {
+        if (bi_chevron_down[3].style.transform == "rotate(0deg)") {
+            bi_chevron_down[3].style.transform = "rotate(180deg)";
+        } else {
+            bi_chevron_down[3].style.transform = "rotate(0deg)";
+        };
+    });
+    // ==================================
+    arrowhandler[4].addEventListener('click', () => {
+        if (bi_chevron_down[4].style.transform == "rotate(0deg)") {
+            bi_chevron_down[4].style.transform = "rotate(180deg)";
+        } else {
+            bi_chevron_down[4].style.transform = "rotate(0deg)";
+        };
+    });
+};
+AsideLiUlAnimation();
 // =============================
 function searchIconAnimation() {
     const srch_box_nav = document.querySelector(".srch_box_nav2");
